@@ -1,0 +1,20 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(467,5): warning MSB8028: The intermediate directory (C:\Users\norri\Documents\GitHub\_Game Development\Custom Engine Projects\Custom Engine OpenGL\bin\intermediates\x64\Debug\) contains files shared from another project (Cherno OpenGL Tutorial Project.vcxproj, Custom Engine_OpenGL.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Shader.cpp
+  Debug.cpp
+  Generating Code...
+Main.obj : error LNK2019: unresolved external symbol glewInit referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwInit referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function main
+Main.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function main
+Main.obj : error LNK2001: unresolved external symbol __glewBindBuffer
+Main.obj : error LNK2001: unresolved external symbol __glewBufferData
+Main.obj : error LNK2001: unresolved external symbol __glewGenBuffers
+Main.obj : error LNK2001: unresolved external symbol __glewEnableVertexAttribArray
+Main.obj : error LNK2001: unresolved external symbol __glewVertexAttribPointer
+C:\Users\norri\Documents\GitHub\_Game Development\Custom Engine Projects\Custom Engine OpenGL\Dependencies\GLEW\lib\Release\Win32\glew32s.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\norri\Documents\GitHub\_Game Development\Custom Engine Projects\Custom Engine OpenGL\Dependencies\GLFW\lib-vc2019\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\norri\Documents\GitHub\_Game Development\Custom Engine Projects\Custom Engine OpenGL\bin\x64\Debug\Custom Engine OpenGL.exe : fatal error LNK1120: 13 unresolved externals
