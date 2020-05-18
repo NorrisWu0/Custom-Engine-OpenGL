@@ -21,6 +21,16 @@ int main(void)
 		return -1;
 	}
 
+	/* Make the window's context current */
+	glfwMakeContextCurrent(window);
+
+	/* Initialize GLEW library*/
+	if (glewInit() != GLEW_OK)
+		std::cout << "[LINKER ERROR]: GLEW failed to initialize!!" << std::endl;
+
+	/* Output OpenGL Version to console*/
+	std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
+
 	Shader* _vShader = new Shader("VertexShader.Colored.2D", "Src/Rendering/GLSL/VertexShader.Colored.2D.glsl", Shader::Type::Vertex);
 	Shader* _fShader = new Shader("FragmentShader.Colored.2D", "Src/Rendering/GLSL/FragmentShader.Colored.2D.glsl", Shader::Type::Fragment);
 	ShaderProgram* shaderprogram = new ShaderProgram("ShaderProgram.Colored.2D", _vShader, _fShader);
@@ -40,16 +50,6 @@ int main(void)
 
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0);
-	
-	/* Make the window's context current */
-	glfwMakeContextCurrent(window);
-
-	/* Initialize GLEW library*/
-	if (glewInit() != GLEW_OK)
-		std::cout << "[LINKER ERROR]: GLEW failed to initialize!!" << std::endl;
-
-	/* Output OpenGL Version to console*/
-	std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
 
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
