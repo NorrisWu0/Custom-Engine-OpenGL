@@ -1,12 +1,12 @@
 #include "ShaderProgram.h"
 
-ShaderProgram::ShaderProgram(const char* _id, const Shader* _vertexShader, const Shader* _fragmentShader)
+ShaderProgram::ShaderProgram(const char* _id, const Shader* _vertex, const Shader* _fragment)
 	: Asset(_id)
 {
 	m_Program = glCreateProgram();
 
-	glAttachShader(m_Program, _vertexShader->GetShader());
-	glAttachShader(m_Program, _fragmentShader->GetShader());
+	glAttachShader(m_Program, _vertex->GetShader());
+	glAttachShader(m_Program, _fragment->GetShader());
 	glLinkProgram(m_Program);
 	
 	//glDetachShader(m_Program, _vertexShader->GetShader());
@@ -25,8 +25,6 @@ ShaderProgram::ShaderProgram(const char* _id, const Shader* _vertexShader, const
 	
 	glGenVertexArrays(1, &m_VAO); // Number of array to generate, THE array to store.
 
-	//glDeleteShader(_vertexShader->GetShader());
-	//glDeleteShader(_fragmentShader->GetShader());
 }
 
 ShaderProgram::~ShaderProgram() {}

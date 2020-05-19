@@ -19,3 +19,24 @@ void Debug::Log(const LogLevel _level, const char* _msg)
 			std::cout << "[Log]: " << _msg << std::endl;
 	}
 }
+
+void Debug::GLClearError()
+{
+	while (glGetError() != GL_NO_ERROR);
+}
+
+void Debug::GLCheckError()
+{
+	while (GLenum _error = glGetError())
+		std::cout << "[OPENGL ERROR]: " << _error << std::endl;
+}
+
+bool Debug::GLLogCall(const char* _function, const char* _file, int _line)
+{
+	while (GLenum _error = glGetError()) 
+	{
+		std::cout << "[OpenGL ERROR (" << _error << ")]:"<< _function << _file << ":line." << _line << std::endl;
+		return false;
+	}
+	return true;
+}

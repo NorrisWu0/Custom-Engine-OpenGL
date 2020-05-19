@@ -1,8 +1,5 @@
 #include "Shader.h"
 
-#include <fstream>
-#include <iostream>
-#include "Utility/Exception.h"
 // Compile Shader based on file and type given.
 Shader::Shader(const char* _id, const char* _filePath, const Type _type)
 	: Asset(_id)

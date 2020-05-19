@@ -167,8 +167,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Rendering\ShaderProgram\ShaderProgram_2D_Colored.cpp" />
     <ClCompile Include="Src\Meshes\Mesh.cpp" />
-    <ClCompile Include="ShaderProgram_Colored2D.cpp" />
     <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Pentagon.cpp" />
     <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Square.cpp" />
     <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Triangle.cpp" />
@@ -182,7 +182,6 @@
     <ClCompile Include="Src\Utility\Debug.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".editorconfig" />
     <None Include="Src\Rendering\GLSL\FragmentShader.Colored.2D.glsl" />
     <None Include="Src\Rendering\GLSL\VertexShader.Colored.2D.glsl" />
     <None Include="Src\Rendering\GLSL\FragmentShader.Colored.3D.glsl" />
@@ -193,8 +192,8 @@
     <None Include="Src\Rendering\GLSL\VertexShader.Textured.3D.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Rendering\ShaderProgram\ShaderProgram_2D_Colored.h" />
     <ClInclude Include="Src\Meshes\Mesh.h" />
-    <ClInclude Include="ShaderProgram_Colored2D.h" />
     <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Pentagon.h" />
     <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Square.h" />
     <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Triangle.h" />

@@ -1,8 +1,10 @@
 #pragma once
 #include <GL/glew.h>
 #include <string>
+#include <fstream>
 
 #include "Asset.h"
+#include "Utility/Exception.h"
 
 class Shader : public Asset
 {

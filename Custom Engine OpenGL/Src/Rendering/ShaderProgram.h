@@ -3,13 +3,16 @@
 #include <string>
 
 #include "Asset.h"
-#include "Rendering/Shader.h"
+#include "Shader.h"
 #include "Utility/Exception.h"
+
+struct Configuration;
+class Mesh;
 
 class ShaderProgram : public Asset
 {
 	public:
-	ShaderProgram(const char* _id, const Shader* _vertexShader, const Shader* _fragmentShader);
+	ShaderProgram(const char* _id, const Shader* _vertex, const Shader* _fragment);
 	~ShaderProgram();
 
 	const unsigned int GetProgram() const;
