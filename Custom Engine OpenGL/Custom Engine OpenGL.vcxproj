@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;   _DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Custom Engine OpenGl\Src;$(SolutionDIr)Dependencies\GLFW\include;$(SolutionDIr)Dependencies\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Custom Engine OpenGl\Src;$(SolutionDIr)Dependencies\GLEW\include;$(SolutionDIr)Dependencies\GLFW\include;$(SolutionDIr)Dependencies\GLM;$(SolutionDIr)Dependencies\STB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,7 +119,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;   _DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Custom Engine OpenGl\Src;$(SolutionDIr)Dependencies\GLFW\include;$(SolutionDIr)Dependencies\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Custom Engine OpenGl\Src;$(SolutionDIr)Dependencies\GLEW\include;$(SolutionDIr)Dependencies\GLFW\include;$(SolutionDIr)Dependencies\GLM;$(SolutionDIr)Dependencies\STB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,7 +136,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;   NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Custom Engine OpenGl\Src;$(SolutionDIr)Dependencies\GLFW\include;$(SolutionDIr)Dependencies\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Custom Engine OpenGl\Src;$(SolutionDIr)Dependencies\GLEW\include;$(SolutionDIr)Dependencies\GLFW\include;$(SolutionDIr)Dependencies\GLM;$(SolutionDIr)Dependencies\STB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,7 +155,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;   NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Custom Engine OpenGl\Src;$(SolutionDIr)Dependencies\GLFW\include;$(SolutionDIr)Dependencies\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Custom Engine OpenGl\Src;$(SolutionDIr)Dependencies\GLEW\include;$(SolutionDIr)Dependencies\GLFW\include;$(SolutionDIr)Dependencies\GLM;$(SolutionDIr)Dependencies\STB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -167,7 +167,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Meshes\Mesh.cpp" />
     <ClCompile Include="ShaderProgram_Colored2D.cpp" />
+    <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Pentagon.cpp" />
+    <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Square.cpp" />
+    <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Triangle.cpp" />
+    <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_3D_Cube.cpp" />
+    <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_3D_Tetrahedron.cpp" />
+    <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_File_OBJ.cpp" />
     <ClCompile Include="Src\Rendering\ShaderProgram.cpp" />
     <ClCompile Include="Src\Asset.cpp" />
     <ClCompile Include="Src\Rendering\Shader.cpp" />
@@ -186,7 +193,14 @@
     <None Include="Src\Rendering\GLSL\VertexShader.Textured.3D.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Meshes\Mesh.h" />
     <ClInclude Include="ShaderProgram_Colored2D.h" />
+    <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Pentagon.h" />
+    <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Square.h" />
+    <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Triangle.h" />
+    <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_3D_Cube.h" />
+    <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_3D_Tetrahedron.h" />
+    <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_File_OBJ.h" />
     <ClInclude Include="Src\Rendering\ShaderProgram.h" />
     <ClInclude Include="Src\Asset.h" />
     <ClInclude Include="Src\Rendering\Shader.h" />
