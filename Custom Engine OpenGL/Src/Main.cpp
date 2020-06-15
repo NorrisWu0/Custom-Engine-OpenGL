@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "Utility/Debug.h"
+#include "Input.h"
 #include "Config/Configuration.h"
 #include "Rendering/ShaderProgram.h"
 
@@ -24,6 +25,7 @@ int main(void)
 
 	/* Make the window's context current */
 	glfwMakeContextCurrent(window);
+
 
 	/* Initialize GLEW library*/
 	if (glewInit() != GLEW_OK)
@@ -63,10 +65,14 @@ int main(void)
 
 	glUseProgram(shaderprogram->GetProgram());
 
+	Input::Instance->Setup(window);
+
 	#pragma region Update
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
+		Input::Instance->Update(window);
+
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
 

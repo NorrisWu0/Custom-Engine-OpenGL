@@ -5,8 +5,8 @@
 #include "Asset.h"
 #include "Shader.h"
 #include "Utility/Exception.h"
+#include "Config/Configuration.h"
 
-struct Configuration;
 class Mesh;
 
 class ShaderProgram : public Asset

@@ -167,6 +167,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\Input.cpp" />
+    <ClCompile Include="Src\Config\Configuration.cpp" />
     <ClCompile Include="Src\Rendering\ShaderProgram\ShaderProgram_2D_Colored.cpp" />
     <ClCompile Include="Src\Meshes\Mesh.cpp" />
     <ClCompile Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Pentagon.cpp" />
@@ -192,6 +194,7 @@
     <None Include="Src\Rendering\GLSL\VertexShader.Textured.3D.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Input.h" />
     <ClInclude Include="Src\Rendering\ShaderProgram\ShaderProgram_2D_Colored.h" />
     <ClInclude Include="Src\Meshes\Mesh.h" />
     <ClInclude Include="Src\Meshes\Pre-built Meshes\Mesh_2D_Pentagon.h" />
